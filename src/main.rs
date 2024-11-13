@@ -5,15 +5,14 @@ pub enum Route {
     #[layout(HomeNavBar)]  
     #[route("/")]  
     Home {},  
-    #[end_layout]  
+    #[end_layout]
+
+    #[route("/dashboard")] // Notice this route between the layouts  
+    Dashboard {},  
 
     #[layout(LoginNavBar)]  
     #[route("/login")]  
     Login {},  
-    #[end_layout]  
-
-    #[route("/dashboard")]  
-    Dashboard {},  
 }  
 
 fn HomeNavBar() -> Element {
